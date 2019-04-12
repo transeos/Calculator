@@ -43,7 +43,6 @@ target_wrapper.*
 CMakeLists.txt.user*
 
 # directories
-3rdPartyLib
 build
 
 # swp files
