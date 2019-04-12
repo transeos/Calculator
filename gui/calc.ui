@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalcWindow</class>
+ <widget class="QMainWindow" name="CalcWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>876</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="CalcLineEdit" name="userLineInput">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>451</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Press enter to copy and include the expression in the history</string>
+    </property>
+    <property name="text">
+     <string>Please enter arithmetic expression here</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="outputLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>451</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Output : </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="CalcHistory" name="exprHistoryList">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>341</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Press delete to remove from history</string>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearHistoryButton">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>210</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear
+History</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="fnFrame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>460</y>
+      <width>181</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Get list of functions</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="fnCombo">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Fnlabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>66</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Functions</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="opFrame">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>460</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Get list of functions</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="opCombo">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="opLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>66</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Operands</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="copyResultButton">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>20</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Copy to clip board</string>
+    </property>
+    <property name="text">
+     <string>Copy
+Result</string>
+    </property>
+   </widget>
+   <widget class="CalcVars" name="variableTable">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>20</y>
+      <width>261</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Select to edit a variable</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>Variable</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Value</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="addVariableButton">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>480</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>add / update</string>
+    </property>
+    <property name="text">
+     <string>add / update
+variable</string>
+    </property>
+   </widget>
+   <widget class="CalcLineEdit" name="varLineInput">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>480</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>variable</string>
+    </property>
+    <property name="text">
+     <string>Enter variable</string>
+    </property>
+   </widget>
+   <widget class="CalcLineEdit" name="valLineInput">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>510</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>value</string>
+    </property>
+    <property name="text">
+     <string>Enter value</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>876</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CalcLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>CalcMainWindow.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CalcHistory</class>
+   <extends>QListWidget</extends>
+   <header>CalcMainWindow.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CalcVars</class>
+   <extends>QTableWidget</extends>
+   <header location="global">CalcMainWindow.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>clearHistoryButton</tabstop>
+  <tabstop>exprHistoryList</tabstop>
+  <tabstop>userLineInput</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
