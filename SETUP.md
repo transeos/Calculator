@@ -3,6 +3,11 @@
 # prerequisites
 qt4
 
+## download git repository
+git clone --recursive https://github.com/transeos/Calculator
+## or update submodules (inside 'cryptotrader' repository)
+git submodule update --init --recursive
+
 ## build calculator
 mkdir build
 cd build
