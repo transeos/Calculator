@@ -1,24 +1,18 @@
 import React from 'react';
-import { Segment, Grid, Input, Button, Table } from 'semantic-ui-react';
+import { Table, Form } from 'semantic-ui-react';
 
 const Variables = () => {
     return (
-        <Segment>
-            <Grid columns={3}>
-                <Grid.Row>
-                    <Grid.Column>
-                        <Button>Add/Update variable</Button>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Input placeholder='Enter variable...' />
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Input placeholder='Enter value...' />
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+        <div>
+            <Form>
+                <Form.Group widths='equal'>
+                    <Form.Input fluid label='Enter variable...' placeholder='x' />
+                    <Form.Input fluid label='Enter value...' placeholder='1' />
+                </Form.Group>
+                <Form.Button>Add/Update variable</Form.Button>
+            </Form>
 
-            <Table celled striped>
+            <Table definition>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Variable</Table.HeaderCell>
@@ -37,7 +31,7 @@ const Variables = () => {
                     </Table.Row>
                 </Table.Body>
             </Table>
-        </Segment>
+        </div>
     );
 };
 

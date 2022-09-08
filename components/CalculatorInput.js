@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Label, Icon } from 'semantic-ui-react';
+import { Input, Label, Icon, Button } from 'semantic-ui-react';
 
 const CalculatorInput = () => {
   return (
@@ -10,14 +10,16 @@ const CalculatorInput = () => {
         placeholder='Enter expression...'
         error={false}
         action={{
-            color: 'teal',
-            labelPosition: 'right',
-            icon: 'copy',
-            content: 'Copy',
+          color: 'teal',
+          labelPosition: 'right',
+          icon: 'copy',
+          content: 'Copy',
         }}
       />
       <br />
-      <Icon loading name='spinner' /> <Label as='a' content={"0"} icon='calculator' />
+      <Button basic color='red' content='Red' style={{ marginRight: '10px' }}>Clear</Button>
+      <Icon loading name='spinner' />
+      <Label as='a' content={"0"} icon='calculator' />
       <br /><br /><br />
     </div>
   );
