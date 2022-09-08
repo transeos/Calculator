@@ -17,7 +17,7 @@ const History = () => {
                         <Icon name='calculator' /> 120
                     </Table.Cell>
                     <Table.Cell>10 minutes ago</Table.Cell>
-                    <Table.Cell warning>
+                    <Table.Cell>
                         <Button>
                             <Button.Content visible>
                                 <Icon name='trash alternate' />

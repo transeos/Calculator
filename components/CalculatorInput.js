@@ -17,9 +17,9 @@ const CalculatorInput = () => {
         }}
       />
       <br />
-      <Button basic color='red' content='Red' style={{ marginRight: '10px' }}>Clear</Button>
+      <Button basic size={"mini"} color='red' content='Red' style={{ marginRight: '30px' }}>Clear</Button>
       <Icon loading name='spinner' />
-      <Label as='a' content={"0"} icon='calculator' />
+      <Label as='a' content={"0"} size={"large"} icon='calculator' />
       <br /><br /><br />
     </div>
   );
