@@ -1,26 +1,37 @@
 import React from 'react';
 import { Input, Label, Icon, Button } from 'semantic-ui-react';
 
-const CalculatorInput = () => {
+const CalculatorInput = ({ userInputChanged }) => {
   return (
     <div>
-      <br />
-      <Input fluid
-        focus={true}
-        placeholder='Enter expression...'
-        error={false}
-        action={{
-          color: 'teal',
-          labelPosition: 'right',
-          icon: 'copy',
-          content: 'Copy',
-        }}
-      />
-      <br />
-      <Button basic size={"mini"} color='red' content='Red' style={{ marginRight: '30px' }}>Clear</Button>
-      <Icon loading name='spinner' />
-      <Label as='a' content={"0"} size={"large"} icon='calculator' />
-      <br /><br /><br />
+      <div>
+        <br />
+        <Input fluid focus={true} placeholder='Enter expression...' onChange={userInputChanged} >
+          <Button>
+            <Button.Content >
+              <Icon name='copy outline' />
+            </Button.Content>
+          </Button>
+          <input />
+          <Button color='orange'>
+            <Button.Content >
+              <Icon name='times rectangle' />
+            </Button.Content>
+          </Button>
+        </Input>
+      </div>
+      <div>
+        <br />
+        <Icon loading name='spinner' />
+        <Label fluid content={"1111111111111"} size={"huge"} icon='calculator' />
+        <Button>
+          <Button.Content >
+            <Icon name='copy outline' />
+          </Button.Content>
+        </Button>
+      </div>
+
+      <br /><br />
     </div>
   );
 };

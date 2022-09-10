@@ -19,7 +19,7 @@ const History = () => {
                     <Table.Cell>10 minutes ago</Table.Cell>
                     <Table.Cell>
                         <Button>
-                            <Button.Content visible>
+                            <Button.Content>
                                 <Icon name='trash alternate' />
                             </Button.Content>
                         </Button>
@@ -33,7 +33,7 @@ const History = () => {
                     <Table.Cell>12 minutes ago</Table.Cell>
                     <Table.Cell>
                         <Button>
-                            <Button.Content visible>
+                            <Button.Content>
                                 <Icon name='trash alternate' />
                             </Button.Content>
                         </Button>

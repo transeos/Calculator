@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react';
 import Head from 'next/head';
-import CalculatorInput from './CalculatorInput.js'
 
 const Layout = (props) => {
   return (
@@ -12,8 +11,6 @@ const Layout = (props) => {
           href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
         />
       </Head>
-
-      <CalculatorInput />
 
       {props.children}
     </Container>
